@@ -1,19 +1,16 @@
 {
-  "name": "pink",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Личный проект «Пинк» от HTML Academy",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "0.1.x"
-  },
-  "scripts": {
-    "test": "editorconfig-cli"
-  },
-  "editorconfig-cli": [
-    "*.html",
-    "*.json"
-  ],
-  "engines": {
-    "node": "6.7"
+    "browser-sync": "^2.2.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-clean-css": "^2.0.11",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-watch": "^4.3.9",
+    "imagemin-pngquant": "^4.0.0",
+    "rimraf": "^2.3.1"
   }
 }

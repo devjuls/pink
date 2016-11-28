@@ -1,10 +1,4 @@
-.DS_Store
-.idea
-*.ai
-*.log
-*.pdf
+node_modules
+prod
+dev/bower/
 *.psd
-*.sublime*
-css/*.css
-node_modules/
-Thumbs.db
