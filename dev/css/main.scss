@@ -1,0 +1,17 @@
+/*vars*/
+$container-width: 1100px;
+$footer-height: 125px;
+
+/*colors*/
+$bg-color: #fff;
+
+
+
+/*layout*/
+@import "_adjust/fonts.scss";
+@import "../bower/normalize.css/normalize.css";
+@import "_adjust/adjustment.scss";
+
+
+//////main section
+
