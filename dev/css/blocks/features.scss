@@ -1,0 +1,46 @@
+.features__promo {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.features__wrapper {
+  background-color: $light-grey;
+  padding-top: 50px;
+}
+
+.features__content {
+    @include tablet {
+    float: right;
+    width: 50%;
+
+  }
+}
+
+.features__list {
+  @include container;
+  @include clearfix;
+  position: relative;
+}
+
+.features__item {
+  margin-bottom: 30px;
+}
+
+.features__title {
+  color: #000;
+}
+
+.features__text {
+  text-align: center;
+}
+
+.features__image {
+  display: block;
+  margin: 0 auto;
+
+  @include tablet {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}

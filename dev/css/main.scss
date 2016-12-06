@@ -1,17 +1,23 @@
-/*vars*/
-$container-width: 1100px;
-$footer-height: 125px;
-
-/*colors*/
-$bg-color: #fff;
-
-
-
 /*layout*/
-@import "_adjust/fonts.scss";
 @import "../bower/normalize.css/normalize.css";
-@import "_adjust/adjustment.scss";
+@import "variables.scss";
+@import "_global/fonts.scss";
+@import "_global/mixins.scss";
+@import "_global/adjustment.scss";
+@import "_global/typo.scss";
+@import "_global/buttons.scss";
 
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/download.scss";
+@import "blocks/features.scss";
+@import "blocks/testimonials.scss";
+@import "blocks/prices.scss";
+@import "blocks/contacts.scss";
+@import "blocks/photos.scss";
+@import "blocks/post-photo.scss";
+@import "blocks/footer.scss";
+@import "blocks/copyright.scss";
+@import "blocks/challenge.scss";
 
-//////main section
 

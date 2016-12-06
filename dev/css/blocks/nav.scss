@@ -1,0 +1,61 @@
+.nav {
+  // float: right;
+}
+
+.nav__wrapper {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: -22px;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  background-color: $dark-grey;
+
+  &.active {
+    display: block;
+  }
+}
+
+.nav__toggle {
+  float: right;
+  width: 20%;
+  width: 50px;
+  height: 24px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &--open {
+    background: url('../../images/icons/icon-menu-burger.svg') center center no-repeat;
+  }
+
+  &--close {
+    background: url('../../images/icons/icon-menu-cross.svg') center center no-repeat;
+  }
+}
+
+
+.nav__top {
+  @extend %clearfix;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  box-shadow: 0 1px 0 black;
+}
+
+.nav__item {
+
+  a {
+    display: block;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    background-color: $dark-grey;
+    box-shadow: 0 1px 0 black, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+

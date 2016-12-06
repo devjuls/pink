@@ -1,0 +1,32 @@
+.contacts {
+  @include container;
+  padding-top: 45px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.contacts__promo {
+  margin-bottom: 35px;
+}
+
+.contacts__item {
+  margin-bottom: 20px;
+
+  @include tablet {
+    float: left;
+    width: 50%;
+
+    &:last-child {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+}
+
+.contacts__title {
+  font-size: 18px;
+}
+
+.contacts__info {
+  font-size: 24px;
+}

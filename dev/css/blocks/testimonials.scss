@@ -1,0 +1,37 @@
+.testimonials {
+  @include container;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.testimonials__item {
+  &:nth-child(n+2) {
+    display: none;
+  }
+}
+
+.testimonials__author {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+.testimonials__info {
+  display: none;
+
+
+  @include tablet {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.testimonials__text {
+  text-align: center;
+}

@@ -1,0 +1,49 @@
+.photos__promo {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  p {
+    text-align: center;
+    line-height: 2;
+    margin: 0;
+  }
+}
+
+.photos__item--featured {
+  margin: 0 auto;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.photos__item-info {
+  text-align: left;
+  background-color: $light-grey;
+  padding: 25px 16px;
+}
+
+.photos__item {
+  margin-bottom: 20px;
+
+  img {
+    display: block;
+  }
+}
+
+.photos__author {
+  font-weight: 700;
+}
+
+.photos__time {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.photos__like {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $pink;
+}

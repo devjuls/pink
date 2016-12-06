@@ -1,0 +1,77 @@
+.post-photo {
+  background-color: $light-grey;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.post-photo__tools {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.post-photo__tool {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 48px;
+    height: 48px;
+  }
+
+  &--crop {
+    a{
+      background: url('../../images/icons/icon-editor-crop.svg') center center no-repeat;
+    }
+  }
+
+  &--fill {
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      width: 48px;
+      height: 48px;
+      background: url('../../images/icons/icon-editor-fill.svg') center center no-repeat;
+    }
+  }
+
+  &--contrast {
+    a {
+      background: url('../../images/icons/icon-editor-contrast.svg') center center no-repeat;
+    }
+  }
+}
+
+.post-photo__range{
+  position: relative;
+  width: calc(100% - 44px);
+  height: 2px;
+  background-color: $grey;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.post-photo__range-toggle {
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  right: 30px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid $pink;
+  border-radius: 50%;
+  background-color: $light-grey;
+}
+
+.post-photo__buttons {
+  border-top: 1px solid rgba(#000, 0.1);
+  padding-top: 40px;
+}
+
+.post-photo__submit, .post-photo__cancel {
+  margin-bottom: 10px;
+}

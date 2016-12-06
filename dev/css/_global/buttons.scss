@@ -1,0 +1,30 @@
+.btn {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 3px solid;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &--white {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &--pink {
+    border-color: $pink;
+    color: $pink;
+  }
+
+  &--grey {
+    border-color: $grey;
+    color: $grey;
+    opacity: 0.1;
+  }
+}
+
+
