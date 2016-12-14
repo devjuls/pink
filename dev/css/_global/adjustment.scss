@@ -62,7 +62,7 @@ img {
   height: auto;
 }
 
-.visuallyhidden {
+.visuallyhidden { //визуально скрыт
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -73,8 +73,21 @@ img {
   width: 1px;
 }
 
-.text-hidden {
-  font-size: 0;
+.mobile-hidden { //визуально скрыт на мобильных
+  @include mobile-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
 }
+
+// .text-hidden {
+//   font-size: 0;
+// }
 
 

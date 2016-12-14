@@ -1,20 +1,19 @@
-.nav {
-  // float: right;
+.nav__wrapper {
+  @include container;
+  @include clearfix;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
 
-.nav__wrapper {
+.nav__logo {
+  float: left;
+}
+
+.nav__list {
   display: none;
-  position: absolute;
-  z-index: 2;
-  top: -22px;
-  right: 0;
   width: 100%;
   text-align: center;
   background-color: $dark-grey;
-
-  &.active {
-    display: block;
-  }
 }
 
 .nav__toggle {
@@ -25,22 +24,19 @@
   outline: none;
   border: none;
   cursor: pointer;
-
-  &--open {
-    background: url('../../images/icons/icon-menu-burger.svg') center center no-repeat;
-  }
-
-  &--close {
-    background: url('../../images/icons/icon-menu-cross.svg') center center no-repeat;
-  }
+  background: url('./../images/icons/icon-menu-burger.svg') center center no-repeat;
 }
 
+.nav.open {
+  background-color: $dark-grey;
 
-.nav__top {
-  @extend %clearfix;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  box-shadow: 0 1px 0 black;
+  .nav__toggle {
+    background: url('./../images/icons/icon-menu-cross.svg') center center no-repeat;
+  }
+
+  .nav__list {
+    display: block;
+  }
 }
 
 .nav__item {
@@ -55,6 +51,56 @@
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
+  }
+}
+
+.nav--nojs { //если отключен js - меню открыто, гамбургер скрыт
+  background-color: $dark-grey;
+
+  .nav__list {
+    display: block;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+}
+
+
+//adaptive
+
+@include desktop {
+
+  .nav {
+    @include container;
+  }
+
+  .nav__wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    width: 150px;
+  }
+
+  .nav__list {
+    display: inline-block;
+    vertical-align: middle;
+    width: 770px;
+    background-color: transparent;
+    text-align: right;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__item {
+    display: inline-block;
+
+    a {
+      background-color: transparent;
+      box-shadow: none;
+      margin-left: 70px;
+    }
   }
 }
 

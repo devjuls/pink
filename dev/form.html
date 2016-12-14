@@ -8,141 +8,160 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+
     <header class="header">
       <div class="header__inner">
 
+        <h1 class="visuallyhidden">Pink - приложение, которое изменит вашу жизнь</h1>
+
         <div class="header__top">
-          <div class="header__top-inner">
 
-            <div class="header__logo">
-              <img src="images/logos/logo-pink-white-mobile.svg" alt="Логотип Pink" width="75" height="22">
-            </div> <!-- /header__logo  -->
+          <nav class="nav nav--nojs">
 
-            <nav class="nav nav--closed nav--nojs">
-              <button class="nav__toggle nav__toggle--open text-hidden" type="button">Открыть меню</button>
-              <div class="nav__wrapper">
-                <div class="nav__top">
-                  <div class="header__logo">
-                    <img src="images/logos/logo-pink-white-mobile.svg" alt="Логотип Pink" width="75" height="22">
-                  </div> <!-- /header__logo  -->
-                  <button class="nav__toggle nav__toggle--close text-hidden" type="button">Закрыть меню</button>
-                </div> <!-- /nav__top  -->
-                <ul class="nav__list">
-                  <li class="nav__item nav__item--active"><a href="index.html" class="nav__link">Главная</a></li>
-                  <li class="nav__item"><a href="photo.html" class="nav__link">Фотографии</a></li>
-                  <li class="nav__item"><a class="nav__link">Конкурс</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Html Academy</a></li>
-                </ul> <!-- /nav__list  -->
-              </div> <!-- /nav__wrapper  -->
-            </nav>
+            <div class="nav__wrapper">
+              <div class="nav__logo">
+                <img src="images/logos/logo-pink-white-mobile.svg" alt="Логотип Pink" width="75" height="22">
+              </div> <!-- /header__logo  -->
+              <button class="nav__toggle" type="button"><span class="visuallyhidden">Открыть меню</span></button>
+            </div> <!-- /nav__wrapper  -->
 
-          </div> <!-- /header__top-inner  -->
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active"><a href="index.html"class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="photo.html" class="nav__link">Фотографии</a></li>
+                <li class="nav__item"><a class="nav__link">Конкурс</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Html Academy</a></li>
+            </ul> <!-- /nav__list  -->
+
+          </nav>
+
         </div> <!-- /header__top  -->
 
-        <h1 class="header__title promo-typo promo-typo--white">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <h1 class="header__title promo-typo promo-typo--white">Конкурс на самое безбашенное<br>путешествие с Пинк</h1>
 
-      </div> <!-- /header__top-inner  -->
-    </header>
-
+      </div> <!-- /header__inner  -->
 
     <main class="content">
-      <div class="container">
 
         <div class="challenge">
 
           <div class="challenge__promo">
-            <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+            <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="mobile-hidden">Пожалуйста, заполните форму ниже:</span></p>
           </div>
 
           <form class="challenge__form" action="get">
-            <fieldset class="challenge__group">
-              <legend class="visuallyhidden">Укажите ваши ФИО</legend>
-              <label class="challenge__label up-title-typo up-title-typo--pink" for="last-name">Фамилия:</label>
-              <input class="challenge__input" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *" required>
-              <label class="challenge__label up-title-typo up-title-typo--pink" for="first-name">Имя:</label>
-              <input class="challenge__input" type="text" id="first-name" name="first-name" placeholder="Введите имя *" required>
-              <label class="challenge__label up-title-typo up-title-typo--pink" for="middle-name">Отчество:</label>
-              <input class="challenge__input" type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
+            <fieldset class="challenge__group challenge__group--noborder">
+              <div class="challenge__group-inner">
+                <legend class="visuallyhidden">Укажите ваши ФИО</legend>
+                <label class="challenge__label up-title-typo up-title-typo--pink"><span>Фамилия:</span>
+                  <input class="challenge__input" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *" required>
+                </label>
+                <label class="challenge__label up-title-typo up-title-typo--pink"><span>Имя:</span>
+                  <input class="challenge__input" type="text" id="first-name" name="first-name" placeholder="Введите имя *" required>
+                </label>
+                <label class="challenge__label up-title-typo up-title-typo--pink"><span>Отчество:</span>
+                  <input class="challenge__input" type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
+                </label>
+              </div> <!-- /challenge__group-inner  -->
+            </fieldset> <!-- /challenge__group  -->
+            <fieldset class="challenge__group challenge__group--bg">
+              <div class="challenge__group-inner">
+                <legend class="challenge__title up-title-typo up-title-typo--pink">Ваши безбашенные достижения в путешествии</legend>
+                <label class="challenge__item">
+                  <input class="challenge__choice" type="checkbox" name="action" value="selfi">
+                  <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
+                  <span class="challenge__item-name">Сделал селфи с акулой</span>
+                </label>
+                <label class="challenge__item">
+                  <input class="challenge__choice" type="checkbox" name="action" value="beach">
+                  <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
+                  <span class="challenge__item-name">Обгорел на пляже</span>
+                </label>
+                <label class="challenge__item">
+                  <input class="challenge__choice" type="checkbox" name="action" value="norris">
+                  <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
+                  <span class="challenge__item-name">Видел Чака Норриса</span>
+                </label>
+                <label class="challenge__item">
+                  <input class="challenge__choice" type="checkbox" name="action" value="souvenirs">
+                  <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
+                  <span class="challenge__item-name">Накупил сувениров</span>
+                </label>
+                <label class="challenge__item">
+                  <input class="challenge__choice" type="checkbox" name="action" value="tower">
+                  <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
+                  <span class="challenge__item-name">Удержал башню</span>
+                </label>
+                <label class="challenge__item">
+                  <input class="challenge__choice" type="checkbox" name="action" value="hotel">
+                  <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
+                  <span class="challenge__item-name">Разгромил отель</span>
+                </label>
+              </div> <!-- /challenge__group-inner  -->
             </fieldset> <!-- /challenge__group  -->
             <fieldset class="challenge__group">
-              <legend class="challenge__title up-title-typo up-title-typo--pink">Ваши безбашенные достижения в путешествии</legend>
-              <label class="challenge__item">
-                <input class="challenge__item-value" type="checkbox" name="action" value="selfi">
-                <span class="challenge__item-name">Сделал селфи с акулой</span>
-              </label>
-              <label class="challenge__item">
-                <input class="challenge__item-value" type="checkbox" name="action" value="beach">
-                <span class="challenge__item-name">Обгорел на пляже</span>
-              </label>
-              <label class="challenge__item">
-                <input class="challenge__item-value" type="checkbox" name="action" value="norris">
-                <span class="challenge__item-name">Видел Чака Норриса</span>
-              </label>
-              <label class="challenge__item">
-                <input class="challenge__item-value" type="checkbox" name="action" value="souvenirs">
-                <span class="challenge__item-name">Накупил сувениров</span>
-              </label>
-              <label class="challenge__item">
-                <input class="challenge__item-value" type="checkbox" name="action" value="tower">
-                <span class="challenge__item-name">Удержал башню</span>
-              </label>
-              <label class="challenge__item">
-                <input class="challenge__item-value" type="checkbox" name="action" value="hotel">
-                <span class="challenge__item-name">Разгромил отель</span>
-              </label>
+              <div class="challenge__group-inner">
+                <legend class="challenge__title up-title-typo up-title-typo--pink mobile-hidden">Контактная информация</legend>
+                <label class="challenge__label challenge__label--iconed challenge__label--phone up-title-typo up-title-typo--pink"><span>Номер телефона:</span>
+                  <input class="challenge__input" type="text" id="phone" name="phone" placeholder="Номер, пожалуйста">
+                </label>
+                <label class="challenge__label challenge__label--iconed challenge__label--email up-title-typo up-title-typo--pink"><span>Адрес почты:</span>
+                  <input class="challenge__input" type="text" id="email" name="email" placeholder="Введите почту *" required>
+                </label>
+              </div> <!-- /challenge__group-inner  -->
+            </fieldset> <!-- /challenge__group  -->
+            <fieldset class="challenge__group challenge__group--bg">
+              <div class="challenge__group-inner">
+                <legend class="challenge__title up-title-typo up-title-typo--pink">С каким приложением путешествовали?</legend>
+                <label class="challenge__item">
+                  <input class="challenge__choice" type="radio" name="app" value="ios">
+                  <span class="challenge__choice-visible challenge__choice-visible--radio"></span>
+                  <span class="challenge__item-name">Pink для iOS</span>
+                </label>
+                <label class="challenge__item">
+                  <input class="challenge__choice" type="radio" name="app" value="android">
+                  <span class="challenge__choice-visible challenge__choice-visible--radio"></span>
+                  <span class="challenge__item-name">Pink на Android</span>
+                </label>
+                <label class="challenge__item">
+                  <input class="challenge__choice" type="radio" name="app" value="windows">
+                  <span class="challenge__choice-visible challenge__choice-visible--radio"></span>
+                  <span class="challenge__item-name">Windows</span>
+                </label>
+              </div> <!-- /challenge__group-inner  -->
             </fieldset> <!-- /challenge__group  -->
             <fieldset class="challenge__group">
-              <legend class="visuallyhidden">Укажите ваши контактные данные</legend>
-              <label class="challenge__label up-title-typo up-title-typo--pink" for="phone">Номер телефона:</label>
-              <input class="challenge__input" type="text" id="phone" name="phone" placeholder="Номер, пожалуйста">
-              <label class="challenge__label up-title-typo up-title-typo--pink" for="email">Адрес почты:</label>
-              <input class="challenge__input" type="text" id="email" name="email" placeholder="Введите почту *" required>
+              <div class="challenge__group-inner">
+                <legend class="challenge__title up-title-typo up-title-typo--pink">Опишите свои эмоции</legend>
+               <!--  <label class="challenge__title up-title-typo up-title-typo--pink" for="comments">Опишите свои эмоции</label> -->
+                <textarea class="challenge__input" name="" id="comments" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              </div> <!-- /challenge__group-inner  -->
             </fieldset> <!-- /challenge__group  -->
-            <fieldset class="challenge__group">
-              <legend class="challenge__title up-title-typo up-title-typo--pink">С каким приложением путешествовали?</legend>
-              <label class="challenge__item">
-                <input class="challenge__item-value" type="radio" name="app" value="ios">
-                <span class="challenge__item-name">Pink для iOS</span>
-              </label>
-              <label class="challenge__item">
-                <input class="challenge__item-value" type="radio" name="app" value="android">
-                <span class="challenge__item-name">Pink на Android</span>
-              </label>
-              <label class="challenge__item">
-                <input class="challenge__item-value" type="radio" name="app" value="windows">
-                <span class="challenge__item-name">Windows</span>
-              </label>
-            </fieldset> <!-- /challenge__group  -->
-            <fieldset class="challenge__group">
-              <legend class="challenge__title up-title-typo up-title-typo--pink">Опишите свои эмоции</legend>
-             <!--  <label class="challenge__title up-title-typo up-title-typo--pink" for="comments">Опишите свои эмоции</label> -->
-              <textarea class="challenge__input" name="" id="comments" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-            </fieldset> <!-- /challenge__group  -->
-            <button class="challenge__submit">Отправить форму</button>
-            <div class="challenge__instructions up-title-typo up-title-typo--grey"><span>*</span> - обязательные поля</div>
+
+            <div class="challenge__form-bottom">
+              <button type="submit" class="challenge__submit">Отправить форму</button>
+              <div class="challenge__instructions up-title-typo up-title-typo--grey"><span>*</span> - обязательные поля</div>
+            </div> <!-- /challenge__form-bottom  -->
           </form> <!-- /challenge__form  -->
 
         </div> <!-- /challenge  -->
 
-      </div> <!-- /container  -->
-
     </main>
 
     <footer class="footer">
-      <div class="container">
+      <div class="footer__inner">
         <div class="footer__logo">
           <img src="images/logos/logo-pink-blue-mobile.svg" alt="Pink" class="logo__image" width="147" height="40">
         </div> <!-- /footer__logo  -->
         <div class="socials">
           <ul class="socials__list">
             <li class="socials__item socials__item--twitter">
-              <a href="#" class="text-hidden">Twitter</a>
+            <a href="#"><span class="visuallyhidden">Twitter</span></a>
             </li>
             <li class="socials__item socials__item--facebook">
-              <a href="#" class="text-hidden">Facebook</a>
+            <a href="#"><span class="visuallyhidden">Facebook</span></a>
             </li>
             <li class="socials__item socials__item--youtube">
-              <a href="#" class="text-hidden">YouTube</a>
+            <a href="#"><span class="visuallyhidden">YouTube</span></a>
             </li>
           </ul> <!-- /socials__list  -->
         </div> <!-- /socials  -->
@@ -152,7 +171,7 @@
             <img src="images/logos/htmlacademy.svg" alt="copyright" class="copyright__logo" width="27" height="34">
           </a>
         </div> <!-- /copyright  -->
-      </div> <!-- /container  -->
+      </div> <!-- /footer__inner  -->
     </footer>
 
   <script src="js/main.js"></script>

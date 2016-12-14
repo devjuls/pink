@@ -8,53 +8,52 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+
     <header class="header">
       <div class="header__inner">
 
+        <h1 class="visuallyhidden">Pink - приложение, которое изменит вашу жизнь</h1>
+
         <div class="header__top">
-          <div class="header__top-inner">
 
-            <div class="header__logo">
-              <img src="images/logos/logo-pink-white-mobile.svg" alt="Логотип Pink" width="75" height="22">
-            </div> <!-- /header__logo  -->
+          <nav class="nav nav--nojs">
 
-            <nav class="nav nav--closed nav--nojs">
-              <button class="nav__toggle nav__toggle--open text-hidden" type="button">Открыть меню</button>
-              <div class="nav__wrapper">
-                <div class="nav__top">
-                  <div class="header__logo">
-                    <img src="images/logos/logo-pink-white-mobile.svg" alt="Логотип Pink" width="75" height="22">
-                  </div> <!-- /header__logo  -->
-                  <button class="nav__toggle nav__toggle--close text-hidden" type="button">Закрыть меню</button>
-                </div> <!-- /nav__top  -->
-                <ul class="nav__list">
-                  <li class="nav__item nav__item--active"><a href="index.html" class="nav__link">Главная</a></li>
-                  <li class="nav__item"><a class="nav__link">Фотографии</a></li>
-                  <li class="nav__item"><a href="form.html" class="nav__link">Конкурс</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Html Academy</a></li>
-                </ul> <!-- /nav__list  -->
-              </div> <!-- /nav__wrapper  -->
-            </nav>
+            <div class="nav__wrapper">
+              <div class="nav__logo">
+                <img src="images/logos/logo-pink-white-mobile.svg" alt="Логотип Pink" width="75" height="22">
+              </div> <!-- /header__logo  -->
+              <button class="nav__toggle" type="button"><span class="visuallyhidden">Открыть меню</span></button>
+            </div> <!-- /nav__wrapper  -->
 
-          </div> <!-- /header__top-inner  -->
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active"><a href="index.html"class="nav__link">Главная</a></li>
+                <li class="nav__item"><a class="nav__link">Фотографии</a></li>
+                <li class="nav__item"><a href="form.html" class="nav__link">Конкурс</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Html Academy</a></li>
+            </ul> <!-- /nav__list  -->
+
+          </nav>
+
         </div> <!-- /header__top  -->
 
-        <h1 class="header__title promo-typo promo-typo--white">Фотографии пользователей</h1>
-        </div> <!-- /header__inner  -->
+        <h1 class="header__title promo-typo promo-typo--white">Фотографии<br>пользователей</h1>
+
+      </div> <!-- /header__inner  -->
+
     </header>
 
+
     <main class="content">
-<!--       <div class="container"> -->
 
         <section class="photos">
-          <div class="photos__promo container">
+          <div class="photos__promo">
             <p>Взгляните на фотографии, которые выкладывают пользователи!</p>
             <p>Видите, как не хватает ваших?</p>
           </div>
 
           <div class="photos__item photos__item--featured">
               <img src="images/photos/panorama-mobile@1x.jpg" alt="photo" class="photos__image" width="320" height="180">
-              <div class="photos__item-info container">
+              <div class="photos__item-info">
                 <span class="photos__author">Анна</span>
                 <time class="photos__time" datetime="2017-01-12T18:18:18+04:00">(5 минут назад)</time>
                 <div class="photos__post">
@@ -67,7 +66,7 @@
               </div> <!-- /photos__item-info  -->
           </div> <!-- /photos__item--featured  -->
 
-          <ul class="photos__list container">
+          <ul class="photos__list">
             <li class="photos__item">
               <img src="images/photos/photo-1-mobile@1x.jpg" alt="photo" class="photos__image" width="280" height="180">
               <div class="photos__item-info">
@@ -115,7 +114,9 @@
               <div class="photos__item-info">
                 <span class="photos__author">Сергей</span>
                 <time class="photos__time" datetime="2017-01-12T18:18:18+04:00">(25 часов назад)</time>
-                <div class="photos__post">Самая кубанская в мире!</div>
+                <div class="photos__post">
+                  <p>Самая кубанская в мире!</p>
+                </div>
                 <a class="photos__like" href="#">
                   <span class="photos__like-text">Нравится:</span>
                   <span class="photos__like-number">4</span>
@@ -151,56 +152,71 @@
               </div>
             </li>
           </ul> <!-- /photos__list  -->
-          <div class="photos__promo container">
+          <div class="photos__promo">
             <p>Затмите их всех!</p>
             <p>Выкладывайте все, что накопилось в телефоне!</p>
           </div>
         </section> <!-- /photos  -->
 
         <section class="post-photo">
-          <div class="container">
+          <div class="post-photo__inner">
             <img src="images/photos/photo-7-mobile@1x.jpg" alt="user photo" class="post-photo__image" width="280" height="384">
-            <ul class="post-photo__tools">
-              <li class="post-photo__tool post-photo__tool--crop post-photo__tool--active">
-                <a href="#" class="text-hidden">Обрезать</a>
-              </li>
-              <li class="post-photo__tool post-photo__tool--fill">
-                <a href="#" class="text-hidden">Залить цветом</a>
-              </li>
-              <li class="post-photo__tool post-photo__tool--contrast">
-                <a href="#" class="text-hidden">Контраст</a>
-              </li>
-            </ul> <!-- /post-photo__tools  -->
-            <div class="post-photo__range text-hidden">Шкала
-              <div class="post-photo__range-toggle text-hidden">Переключатель</div>
-            </div>
-            <div class="post-photo__buttons">
-              <button class="btn btn--pink post-photo__submit" type="submit">Запостить</button>
-              <button class="btn btn--grey post-photo__cancel" type="reset">Отмена</button>
-            </div>
-          </div> <!-- /container  -->
-        </section> <!-- /post-photo  -->
 
-<!--       </div>  -->
-      <!-- /container  -->
+            <div class="post-photo__tools-wrapper">
+
+              <div class="post-photo__tools">
+                <div class="post-photo__tool-wrapper">
+                  <div class="post-photo__tool post-photo__tool--crop post-photo__tool--active">
+                    <a href="#"><span class="visuallyhidden">Обрезать</span></a>
+                  </div> <!-- /post-photo__tool  -->
+                  <div class="post-photo__range post-photo__range--crop"><span class="visuallyhidden">Шкала</span>
+                      <div class="post-photo__range-toggle"><span class="visuallyhidden">Переключатель</span></div>
+                  </div> <!-- /post-photo__range  -->
+                </div> <!-- /post-photo__tool-wrapper  -->
+                <div class="post-photo__tool-wrapper">
+                  <div class="post-photo__tool post-photo__tool--fill">
+                    <a href="#"><span class="visuallyhidden">Залить цветом</span></a>
+                  </div> <!-- /post-photo__tool  -->
+                  <div class="post-photo__range post-photo__range--fill"><span class="visuallyhidden">Шкала</span>
+                      <div class="post-photo__range-toggle"><span class="visuallyhidden">Переключатель</span></div>
+                  </div> <!-- /post-photo__range  -->
+                </div> <!-- /post-photo__tool-wrapper  -->
+                <div class="post-photo__tool-wrapper">
+                  <div class="post-photo__tool post-photo__tool--contrast">
+                    <a href="#"><span class="visuallyhidden">Контраст</span></a>
+                  </div> <!-- /post-photo__tool  -->
+                  <div class="post-photo__range post-photo__range--contrast"><span class="visuallyhidden">Шкала</span>
+                      <div class="post-photo__range-toggle"><span class="visuallyhidden">Переключатель</span></div>
+                  </div> <!-- /post-photo__range  -->
+                </div> <!-- /post-photo__tool-wrapper  -->
+              </div> <!-- /post-photo__tools  -->
+
+              <div class="post-photo__buttons">
+                <button class="btn btn--pink post-photo__submit" type="submit">Запостить</button>
+                <button class="btn btn--grey post-photo__cancel" type="reset">Отмена</button>
+              </div> <!-- /post-photo__buttons  -->
+
+            </div> <!-- /post-photo__tools-wrapper  -->
+          </div> <!-- /post-photo__inner  -->
+        </section> <!-- /post-photo  -->
 
     </main>
 
     <footer class="footer">
-      <div class="container">
+      <div class="footer__inner">
         <div class="footer__logo">
           <img src="images/logos/logo-pink-blue-mobile.svg" alt="Pink" class="logo__image" width="147" height="40">
         </div> <!-- /footer__logo  -->
         <div class="socials">
           <ul class="socials__list">
             <li class="socials__item socials__item--twitter">
-              <a href="#" class="text-hidden">Twitter</a>
+            <a href="#"><span class="visuallyhidden">Twitter</span></a>
             </li>
             <li class="socials__item socials__item--facebook">
-              <a href="#" class="text-hidden">Facebook</a>
+            <a href="#"><span class="visuallyhidden">Facebook</span></a>
             </li>
             <li class="socials__item socials__item--youtube">
-              <a href="#" class="text-hidden">YouTube</a>
+            <a href="#"><span class="visuallyhidden">YouTube</span></a>
             </li>
           </ul> <!-- /socials__list  -->
         </div> <!-- /socials  -->
@@ -210,7 +226,7 @@
             <img src="images/logos/htmlacademy.svg" alt="copyright" class="copyright__logo" width="27" height="34">
           </a>
         </div> <!-- /copyright  -->
-      </div> <!-- /container  -->
+      </div> <!-- /footer__inner  -->
     </footer>
 
   <script src="js/main.js"></script>

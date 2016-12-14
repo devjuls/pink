@@ -14,31 +14,25 @@
         <h1 class="visuallyhidden">Pink - приложение, которое изменит вашу жизнь</h1>
 
         <div class="header__top">
-          <div class="header__top-inner">
 
-            <div class="header__logo">
-              <img src="images/logos/logo-pink-white-mobile.svg" alt="Логотип Pink" width="75" height="22">
-            </div> <!-- /header__logo  -->
+          <nav class="nav nav--nojs">
 
-            <nav class="nav nav--closed nav--nojs">
-              <button class="nav__toggle nav__toggle--open text-hidden" type="button">Открыть меню</button>
-              <div class="nav__wrapper">
-                <div class="nav__top">
-                  <div class="logo">
-                    <img src="images/logos/logo-pink-white-mobile.svg" alt="Логотип Pink" width="75" height="22">
-                  </div> <!-- /logo  -->
-                  <button class="nav__toggle nav__toggle--close text-hidden" type="button">Закрыть меню</button>
-                </div> <!-- /nav__top  -->
-                <ul class="nav__list">
-                  <li class="nav__item nav__item--active"><a class="nav__link">Главная</a></li>
-                  <li class="nav__item"><a href="photo.html" class="nav__link">Фотографии</a></li>
-                  <li class="nav__item"><a href="form.html" class="nav__link">Конкурс</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Html Academy</a></li>
-                </ul> <!-- /nav__list  -->
-              </div> <!-- /nav__wrapper  -->
-            </nav>
+            <div class="nav__wrapper">
+              <div class="nav__logo">
+                <img src="images/logos/logo-pink-white-mobile.svg" alt="Логотип Pink" width="75" height="22">
+              </div> <!-- /header__logo  -->
+              <button class="nav__toggle" type="button"><span class="visuallyhidden">Открыть меню</span></button>
+            </div> <!-- /nav__wrapper  -->
 
-          </div> <!-- /header__top-inner  -->
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active"><a class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="photo.html" class="nav__link">Фотографии</a></li>
+                <li class="nav__item"><a href="form.html" class="nav__link">Конкурс</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Html Academy</a></li>
+            </ul> <!-- /nav__list  -->
+
+          </nav>
+
         </div> <!-- /header__top  -->
 
         <div class="header__photo">
@@ -48,34 +42,34 @@
       </div> <!-- /header__inner  -->
 
       <section class="download">
-          <div class="download__inner">
-            <div class="download__content">
+            <div class="download__inner">
+              <div class="download__content">
 
-            <h2 class="visuallyhidden">Скачать приложение Pink</h2>
+              <h2 class="visuallyhidden">Скачать приложение Pink</h2>
 
-            <div class="download__promo promo-typo promo-typo--white">Взгляните<br>на жизнь<br>иначе!</div>
+              <div class="download__promo promo-typo promo-typo--white">Взгляните<br>на жизнь<br>иначе!</div>
 
-            <a href="#" class="btn btn--white download__link">Скачать приложение</a>
-            <ul class="download__list">
-              <li class="download__item">
-                <a href="#"><span class="text-hidden">Приложение для Apple</span>
-                <img src="images/logos/apple-logo.svg" alt="Apple" width="47" height="56"></a>
-              </li>
-              <li class="download__item">
-                <a href="#"><span class="text-hidden">Приложение для Android</span>
-                <img src="images/logos/android-logo.svg" alt="Android" width="43" height="47"></a>
-              </li>
-              <li class="download__item">
-                <a href="#"><span class="text-hidden">Приложение для Windows</span>
-                <img src="images/logos/microsoft-logo.svg" alt="Windows" width="44" height="41"></a>
-              </li>
-            </ul>
-            <div class="download__text">
-              <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-            </div>
+              <a href="#" class="btn btn--white download__link">Скачать приложение</a>
+              <ul class="download__list">
+                <li class="download__item">
+                  <a href="#"><span class="visuallyhidden">Приложение для Apple</span>
+                  <img src="images/logos/apple-logo.svg" alt="Apple" width="47" height="56"></a>
+                </li>
+                <li class="download__item">
+                  <a href="#"><span class="visuallyhidden">Приложение для Android</span>
+                  <img src="images/logos/android-logo.svg" alt="Android" width="43" height="47"></a>
+                </li>
+                <li class="download__item">
+                  <a href="#"><span class="visuallyhidden">Приложение для Windows</span>
+                  <img src="images/logos/microsoft-logo.svg" alt="Windows" width="44" height="41"></a>
+                </li>
+              </ul>
+              <div class="download__text">
+                <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+              </div>
 
-            </div> <!-- /download__content  -->
-          </div> <!-- /download__inner  -->
+              </div> <!-- /download__content  -->
+            </div> <!-- /download__inner  -->
       </section> <!-- /download  -->
 
     </header>
@@ -115,9 +109,21 @@
                     </div>
                   </li>
 
-                </div> <!-- /features__wrapper -->
+                </div> <!-- /features__content -->
               </ul> <!-- /features__list  -->
-            </div> <!-- /features__content  -->
+
+          </div> <!-- /features__wrapper  -->
+
+          <div class="effect">
+            <span class="effect__number">24</span>
+            <div class="effect__inner">
+              <h3 class="effect__title">Эффект на 24 часа!</h3>
+                <div class="effect__descr">
+                  <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+                </div>
+              <a class="effect__link" href="#">Узнать больше об исследовании</a>
+              </div> <!-- /effect__inner  -->
+          </div> <!-- /effect  -->
 
         </section> <!-- /features  -->
 
@@ -156,81 +162,85 @@
         </section> <!-- /testimonials  -->
 
         <section class="prices">
-<!--           <div class="container"> -->
 
             <h2 class="visuallyhidden">Цены на пакеты приложения Pink</h2>
             <div class="prices__wrapper slider">
-              <ul class="prices__list">
-                <li class="prices__item slider__item slider__item--active">
-                  <div class="prices__item-top">
-                    <h3 class="prices__title">Стандарт</h3>
-                    <div class="prices__price">3,99 USD</div>
-                  </div>
-                  <ul class="prices__features">
-                    <li class="prices__feature">
-                      <div class="prices__feature-name up-title-typo">розовый фильтр</div>
-                      <div class="prices__feature-value prices__feature-value--yes text-hidden">да</div>
-                    </li>
-                    <li class="prices__feature ">
-                      <div class="prices__feature-name up-title-typo">смайлики</div>
-                      <div class="prices__feature-value prices__feature-value--yes text-hidden">да</div>
-                    </li>
-                    <li class="prices__feature">
-                      <div class="prices__feature-name up-title-typo">комментарии</div>
-                      <div class="prices__feature-value prices__feature-value--no text-hidden">нет</div>
-                    </li>
-                  </ul>
-                </li>
-                <li class="prices__item slider__item">
-                  <div class="prices__item-top">
-                    <h3 class="prices__title">Стандарт</h3>
-                    <div class="prices__price">3,99 USD</div>
-                  </div>
-                  <ul class="prices__features">
-                    <li class="prices__feature">
-                      <div class="prices__feature-name up-title-typo">розовый фильтр</div>
-                      <div class="prices__feature-value prices__feature-value--yes text-hidden">да</div>
-                    </li>
-                    <li class="prices__feature">
-                      <div class="prices__feature-name up-title-typo">смайлики</div>
-                      <div class="prices__feature-value prices__feature-value--yes text-hidden">да</div>
-                    </li>
-                    <li class="prices__feature">
-                      <div class="prices__feature-name up-title-typo">комментарии</div>
-                      <div class="prices__feature-value prices__feature-value--no text-hidden">нет</div>
-                    </li>
-                  </ul>
-                </li>
-                <li class="prices__item slider__item">
-                  <div class="prices__item-top">
-                    <h3 class="prices__title">Стандарт</h3>
-                    <div class="prices__price">3,99 USD</div>
-                  </div>
-                  <ul class="prices__features">
-                    <li class="prices__feature">
-                      <div class="prices__feature-name up-title-typo">розовый фильтр</div>
-                      <div class="prices__feature-value prices__feature-value--yes text-hidden">да</div>
-                    </li>
-                    <li class="prices__feature">
-                      <div class="prices__feature-name up-title-typo">смайлики</div>
-                      <div class="prices__feature-value prices__feature-value--yes text-hidden">да</div>
-                    </li>
-                    <li class="prices__feature">
-                      <div class="prices__feature-name up-title-typo">комментарии</div>
-                      <div class="prices__feature-value prices__feature-value--no text-hidden">нет</div>
-                    </li>
-                  </ul>
-                </li>
-              </ul> <!-- /prices__list  -->
+
+              <div class="prices__list">
+
+                <table class="prices__table">
+                  <tr>
+                    <th class="prices__top" colspan="2">
+                      <h3 class="prices__title">База</h3>
+                      <div class="prices__price">1,99 USD</div>
+                    </th>
+                  </tr>
+                  <tr class="prices__feature">
+                    <td class="prices__feature-name up-title-typo">Розовый фильтр</td>
+                    <td class="prices__feature-value prices__feature-value--yes"><span class="visuallyhidden">да</span></td>
+                  </tr>
+                  <tr class="prices__feature">
+                    <td class="prices__feature-name up-title-typo">Смайлики</td>
+                    <td class="prices__feature-value prices__feature-value--yes"><span class="visuallyhidden">да</span></td>
+                  </tr>
+                  <tr class="prices__feature">
+                    <td class="prices__feature-name up-title-typo">Комментарии</td>
+                    <td class="prices__feature-value prices__feature-value--no"><span class="visuallyhidden">нет</span></td>
+                  </tr>
+                </table>
+
+                <table class="prices__table">
+                  <tr>
+                    <th class="prices__top" colspan="2">
+                      <h3 class="prices__title">Стандарт</h3>
+                      <div class="prices__price">3,99 USD</div>
+                    </th>
+                  </tr>
+                  <tr class="prices__feature">
+                    <td class="prices__feature-name up-title-typo">Розовый фильтр</td>
+                    <td class="prices__feature-value prices__feature-value--yes"><span class="visuallyhidden">да</span></td>
+                  </tr>
+                  <tr class="prices__feature">
+                    <td class="prices__feature-name up-title-typo">Смайлики</td>
+                    <td class="prices__feature-value prices__feature-value--yes"><span class="visuallyhidden">да</span></td>
+                  </tr>
+                  <tr class="prices__feature">
+                    <td class="prices__feature-name up-title-typo">Комментарии</td>
+                    <td class="prices__feature-value prices__feature-value--no"><span class="visuallyhidden">нет</span></td>
+                  </tr>
+                </table>
+
+                <table class="prices__table">
+                  <tr>
+                    <th class="prices__top" colspan="2">
+                      <h3 class="prices__title">Анлим</h3>
+                      <div class="prices__price">9,99 USD</div>
+                    </th>
+                  </tr>
+                  <tr class="prices__feature">
+                    <td class="prices__feature-name up-title-typo">Розовый фильтр</td>
+                    <td class="prices__feature-value prices__feature-value--yes"><span class="visuallyhidden">да</span></td>
+                  </tr>
+                  <tr class="prices__feature">
+                    <td class="prices__feature-name up-title-typo">Смайлики</td>
+                    <td class="prices__feature-value prices__feature-value--yes"><span class="visuallyhidden">да</span></td>
+                  </tr>
+                  <tr class="prices__feature">
+                    <td class="prices__feature-name up-title-typo">Комментарии</td>
+                    <td class="prices__feature-value prices__feature-value--no"><span class="visuallyhidden">нет</span></td>
+                  </tr>
+                </table>
+
+              </div> <!-- /prices__list  -->
+
               <div class="prices__controls slider__controls">
                 <li class="slider__control slider__control--active"></li>
                 <li class="slider__control"></li>
                 <li class="slider__control"></li>
               </div> <!-- /slider__controls  -->
+
             </div> <!-- /prices__wrapper  -->
 
-<!--           </div>  -->
-          <!-- /container  -->
         </section> <!-- /prices  -->
 
         <section class="contacts">

@@ -1,66 +1,74 @@
-.header {
-
-    @include tablet {
-      height: 730px;
-    }
-  }
-
-
 .header__inner {
-  height: 237px;
+  min-height: 237px;
   height: 100%;
   width: auto;
-  background: url('../../images/decor/bg-back-mobile@1x.jpg') center top no-repeat;
+  background: url('./../images/decor/bg-back-mobile@1x.jpg') center top no-repeat;
   background-size: cover;
 }
 
 .header__inner--index {
-  height: 462px;
+  min-height: 462px;
   position: relative;
   z-index: 1;
-
-    @include tablet {
-      height: 730px;
-    }
 }
-
-.header__photo {
-
-    img {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
-
-    @include tablet {
-
-      img {
-        left: 45%;
-      }
-    }
-  }
 
 .header__top {
   background-color: rgba(#000, 0.3);
 }
 
-.header__top-inner {
-  @include container;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  @include clearfix;
-  position: relative;
-}
+.header__photo {
+  margin-top: 150px;
 
-
-.header__logo {
-  float: left;
+    img {
+      display: block;
+    }
 }
 
 .header__title {
-  width: $container-width;
-  margin: 0 auto;
-  margin-top: 35px;
-  padding-left: 25px;
-  padding-right: 25px;
+  @include container;
+  padding-top: 35px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
+
+//adaptive
+
+@include tablet {
+
+  .header {
+    min-height: 440px;
+  }
+
+  .header__inner {
+    min-height: 440px;
+  }
+
+  .header--index {
+    min-height: 770px;
+  }
+
+  .header__inner--index {
+    min-height: 770px;
+  }
+
+  .header__photo {
+    img {
+      height: 545px;
+      width: auto;
+      margin: 0 auto;
+      margin-right: 5%;
+    }
+  }
+
+  .header__title {
+    padding-top: 80px;
+    padding-bottom: 135px;
+  }
+}
+
+
+
+
+

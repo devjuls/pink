@@ -1,13 +1,11 @@
-var menuOpen = document.querySelector('.nav__toggle--open');
-var menuClose = document.querySelector('.nav__toggle--close');
-var menu = document.querySelector('.nav__wrapper');
+var menuToggle = document.querySelector('.nav__toggle');
+var nav = document.querySelector('.nav');
 
-menuOpen.addEventListener('click', function(e) {
+nav.classList.remove('nav--nojs'); //удяляем класс nav--nojs, если js работает
+
+menuToggle.addEventListener('click', function(e) {
   e.preventDefault();
-  menu.classList.add('active');
+
+  nav.classList.toggle('open');
 });
 
-menuClose.addEventListener('click', function(e) {
-  e.preventDefault();
-  menu.classList.remove('active');
-});

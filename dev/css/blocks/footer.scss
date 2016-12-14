@@ -3,6 +3,10 @@
   padding-bottom: 35px;
 }
 
+.footer__inner {
+  @include container;
+}
+
 .footer__logo {
   text-align: center;
 }
@@ -10,6 +14,7 @@
 .socials__list {
   padding-top: 35px;
   padding-bottom: 35px;
+  text-align: center;
 }
 
 .socials__item {
@@ -47,6 +52,44 @@
     a {
       background: url('../../images/icons/icon-youtube.svg') center center no-repeat;
     }
+  }
+}
+
+
+//adaptive
+
+@include tablet {
+
+  .footer__inner {
+    @include clearfix;
+  }
+
+  .footer__logo {
+    float: left;
+    width: 30%;
+    text-align: left;
+  }
+
+  .socials {
+    float: left;
+    width: 45%;
+  }
+
+  .socials__list {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .socials__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .copyright {
+    float: right;
+    width: 25%;
+    padding-top: 10px;
+    text-align: right;
   }
 }
 

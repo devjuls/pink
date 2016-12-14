@@ -2,23 +2,28 @@
   background-color: $light-grey;
 }
 
-.prices__item-top {
+.prices__list {
+  @include container;
+  @include clearfix;
+}
+
+.prices__table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &:nth-child(1), &:nth-child(3) {
+    display: none;
+  }
+}
+
+.prices__top {
   background-color: $dark-grey;
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
 }
 
-.prices__features {
-  width: $container-width;
-  margin: 0 auto;
-  // padding-left: 20px;
-  // padding-right: 20px;
-
-}
-
 .prices__feature {
-  padding: 20px;
   border-bottom: 2px solid #e5e5e5;
   background-color: #fff;
 }
@@ -37,14 +42,99 @@
   text-transform: uppercase;
 }
 
+.prices__feature-name {
+  padding: 20px;
+}
+
+.prices__feature-value {
+  padding: 20px;
+  width: 70px;
+}
+
 .prices__feature-value--yes {
-  width: 31px;
-  height: 21px;
-  background: url('../../images/icons/icon-yes.svg') center center no-repeat;
+  // width: 31px;
+  // height: 21px;
+  background: url('./../images/icons/icon-yes.svg') center center no-repeat;
 }
 
 .prices__feature-value--no {
-  width: 27px;
-  height: 27px;
-  background: url('../../images/icons/icon-no.svg') center center no-repeat;
+  // width: 27px;
+  // height: 27px;
+  background: url('./../images/icons/icon-no.svg') center center no-repeat;
 }
+
+
+//adaptive
+
+@include tablet {
+
+  .prices__feature-name {
+    display: none;
+  }
+
+  .prices__table {
+    display: block;
+    width: 155px;
+    float: left;
+    padding: 0;
+
+    position: relative;
+
+    &:nth-child(1), &:nth-child(3) {
+      display: block;
+    }
+
+    &:nth-child(1) {
+
+      margin-left: 155px;
+
+      .prices__feature-name {
+        display: block;
+        position: absolute;
+        width: 155px;
+        left: -155px;
+        background-color: #fff;
+        box-sizing: border-box;
+        text-transform: none;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-left: 15px;
+        border-left: 2px solid #e5e5e5;
+        border-right: 2px solid #e5e5e5;
+        border-bottom: 2px solid #e5e5e5;
+      }
+    }
+  }
+
+  .prices__top {
+    display: block;
+    float: left;
+    width: 155px;
+    padding-top: 16px;
+    padding-bottom: 10px;
+    border-right: 2px solid #e5e5e5;
+  }
+
+  .prices__title {
+    font-size: 16px;
+  }
+
+  .prices__price {
+    font-size: 18px;
+  }
+
+  .prices__feature {
+    display: block;
+    @include clearfix;
+  }
+
+  .prices__feature-value {
+    display: block;
+    float: left;
+    width: 155px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-right: 2px solid #e5e5e5;
+  }
+}
+

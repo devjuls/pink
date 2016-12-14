@@ -1,4 +1,5 @@
 .challenge__promo {
+  @include container;
   margin-top: 50px;
   margin-bottom: 50px;
 
@@ -12,21 +13,25 @@
 .challenge__group {
   border: none;
   padding: 0;
+  padding-top: 40px;
   margin-bottom: 44px;
+
+  &--bg {
+    background-color: $light-grey;
+  }
+}
+
+.challenge__group-inner {
+  @include container;
 }
 
 .challenge__title {
+
   width: 100%;
   text-align: center;
   padding-left: 25px;
   padding-right: 25px;
   margin-bottom: 20px;
-}
-
-.challenge__label {
-  display: block;
-  margin-left: 22px;
-  margin-bottom: 12px;
 }
 
 .challenge__input {
@@ -37,6 +42,7 @@
   padding: 18px 22px;
   font-size: 18px;
   color: $grey;
+  margin-top: 12px;
   margin-bottom: 22px;
 
   &::-webkit-input-placeholder {
@@ -55,7 +61,216 @@
   }
 }
 
-// input::-webkit-input-placeholder {color: $grey;}
-// input:-moz-placeholder          {color: $grey;}
-// input::-moz-placeholder          {color: $grey;}
+.challenge__label {
+  display: block;
+
+  span {
+    margin-left: 22px;
+  }
+}
+
+.challenge__item {
+  display: block;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+//стилизация чекбоксов и радио
+
+.challenge__choice {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.challenge__choice-visible {
+  display: inline-block;
+  vertical-align: middle;
+  content: "";
+  width: 39px;
+  height: 39px;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+  position: relative;
+
+  &:before {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  &--checkbox {
+
+    &:before {
+      width: 22px;
+      height: 10px;
+      bottom: 5px;
+      border-bottom: 3px solid $pink;
+      border-left: 3px solid $pink;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--radio {
+    border-radius: 50%;
+
+    &:before {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $pink;
+    }
+  }
+}
+
+.challenge__choice:checked + .challenge__choice-visible--checkbox{
+  &:before {
+    display: block;
+  }
+}
+
+.challenge__choice:checked + .challenge__choice-visible--radio{
+  &:before {
+    display: block;
+  }
+}
+
+.challenge__item-name {
+  font-size: 18px;
+  padding-left: 30px;
+}
+
+//
+
+
+.challenge__form-bottom {
+  @include container;
+}
+
+.challenge__submit {
+  width: 100%;
+  background-color: #2aab6d;
+  border: 2px solid #2aab6d;
+  border-radius: 2px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.challenge__instructions {
+  text-align: center;
+  text-transform: uppercase;
+
+  span {
+    color: $pink;
+  }
+}
+
+
+//adaptive
+
+@include tablet {
+
+  .challenge__promo {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .challenge__group {
+    @include container;
+    border: 2px solid #e5e5e5;
+    padding-top: 0;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+
+    &--bg {
+      background-color: transparent;
+    }
+
+    &--noborder {
+      border: none;
+      padding: 0;
+    }
+  }
+
+  .challenge__group-inner {
+    width: 100%;
+  }
+
+  .challenge__title {
+    width: auto;
+    margin: 0 auto;
+    margin-top: -12px;
+    margin-bottom: 35px;
+    background-color: #fff;
+  }
+
+  .challenge__form-bottom {
+    @include clearfix;
+  }
+
+  .challenge__submit {
+    float: left;
+    width: 50%;
+  }
+
+  .challenge__instructions {
+    float: right;
+    width: 50%;
+    text-align: right;
+  }
+
+  .challenge__label {
+
+    &--iconed {
+      position: relative;
+
+      .challenge__input {
+        padding-right: 70px;
+      }
+
+      &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        margin: auto;
+        width: 60px;
+        height: 60px;
+        border-bottom-right-radius: 2px;
+        border-top-right-radius: 2px;
+        z-index: 10;
+      }
+    }
+
+    &--phone {
+      &:before {
+        background: #e5e5e5 url("../../images/icons/icon-phone.svg") center center no-repeat;
+      }
+    }
+
+    &--email {
+      &:before {
+       background: #e5e5e5 url("../../images/icons/icon-mail.svg") center center no-repeat;
+      }
+    }
+  }
+}
+
+
+
+
 
