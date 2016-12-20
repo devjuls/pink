@@ -49,7 +49,7 @@
           </div>
 
           <form class="challenge__form" action="get">
-            <fieldset class="challenge__group challenge__group--noborder">
+            <fieldset class="challenge__group challenge__group--name challenge__group--noborder">
               <div class="challenge__group-inner">
                 <legend class="visuallyhidden">Укажите ваши ФИО</legend>
                 <label class="challenge__label up-title-typo up-title-typo--pink"><span>Фамилия:</span>
@@ -63,53 +63,55 @@
                 </label>
               </div> <!-- /challenge__group-inner  -->
             </fieldset> <!-- /challenge__group  -->
-            <fieldset class="challenge__group challenge__group--bg">
+            <fieldset class="challenge__group challenge__group--done challenge__group--bg">
               <div class="challenge__group-inner">
                 <legend class="challenge__title up-title-typo up-title-typo--pink">Ваши безбашенные достижения в путешествии</legend>
-                <label class="challenge__item">
-                  <input class="challenge__choice" type="checkbox" name="action" value="selfi">
-                  <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
-                  <span class="challenge__item-name">Сделал селфи с акулой</span>
-                </label>
-                <label class="challenge__item">
-                  <input class="challenge__choice" type="checkbox" name="action" value="beach">
-                  <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
-                  <span class="challenge__item-name">Обгорел на пляже</span>
-                </label>
-                <label class="challenge__item">
-                  <input class="challenge__choice" type="checkbox" name="action" value="norris">
-                  <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
-                  <span class="challenge__item-name">Видел Чака Норриса</span>
-                </label>
-                <label class="challenge__item">
-                  <input class="challenge__choice" type="checkbox" name="action" value="souvenirs">
-                  <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
-                  <span class="challenge__item-name">Накупил сувениров</span>
-                </label>
-                <label class="challenge__item">
-                  <input class="challenge__choice" type="checkbox" name="action" value="tower">
-                  <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
-                  <span class="challenge__item-name">Удержал башню</span>
-                </label>
-                <label class="challenge__item">
-                  <input class="challenge__choice" type="checkbox" name="action" value="hotel">
-                  <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
-                  <span class="challenge__item-name">Разгромил отель</span>
-                </label>
+                <div class="challenge__items-wrapper">
+                  <label class="challenge__item">
+                    <input class="challenge__choice" type="checkbox" name="action" value="selfi">
+                    <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
+                    <span class="challenge__item-name">Сделал селфи с акулой</span>
+                  </label>
+                  <label class="challenge__item">
+                    <input class="challenge__choice" type="checkbox" name="action" value="beach">
+                    <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
+                    <span class="challenge__item-name">Обгорел на пляже</span>
+                  </label>
+                  <label class="challenge__item">
+                    <input class="challenge__choice" type="checkbox" name="action" value="norris">
+                    <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
+                    <span class="challenge__item-name">Видел Чака Норриса</span>
+                  </label>
+                  <label class="challenge__item">
+                    <input class="challenge__choice" type="checkbox" name="action" value="souvenirs">
+                    <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
+                    <span class="challenge__item-name">Накупил сувениров</span>
+                  </label>
+                  <label class="challenge__item">
+                    <input class="challenge__choice" type="checkbox" name="action" value="tower">
+                    <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
+                    <span class="challenge__item-name">Удержал башню</span>
+                  </label>
+                  <label class="challenge__item">
+                    <input class="challenge__choice" type="checkbox" name="action" value="hotel">
+                    <span class="challenge__choice-visible challenge__choice-visible--checkbox"></span>
+                    <span class="challenge__item-name">Разгромил отель</span>
+                  </label>
+                </div> <!-- /challenge__items-wrapper  -->
               </div> <!-- /challenge__group-inner  -->
             </fieldset> <!-- /challenge__group  -->
-            <fieldset class="challenge__group">
+            <fieldset class="challenge__group challenge__group--contacts">
               <div class="challenge__group-inner">
                 <legend class="challenge__title up-title-typo up-title-typo--pink mobile-hidden">Контактная информация</legend>
-                <label class="challenge__label challenge__label--iconed challenge__label--phone up-title-typo up-title-typo--pink"><span>Номер телефона:</span>
+                <label class="challenge__label challenge__label--iconed challenge__label--phone up-title-typo up-title-typo--pink"><span>Номер телефона</span>
                   <input class="challenge__input" type="text" id="phone" name="phone" placeholder="Номер, пожалуйста">
                 </label>
-                <label class="challenge__label challenge__label--iconed challenge__label--email up-title-typo up-title-typo--pink"><span>Адрес почты:</span>
+                <label class="challenge__label challenge__label--iconed challenge__label--email up-title-typo up-title-typo--pink"><span>Адрес почты</span>
                   <input class="challenge__input" type="text" id="email" name="email" placeholder="Введите почту *" required>
                 </label>
               </div> <!-- /challenge__group-inner  -->
             </fieldset> <!-- /challenge__group  -->
-            <fieldset class="challenge__group challenge__group--bg">
+            <fieldset class="challenge__group challenge__group--app challenge__group--bg">
               <div class="challenge__group-inner">
                 <legend class="challenge__title up-title-typo up-title-typo--pink">С каким приложением путешествовали?</legend>
                 <label class="challenge__item">
@@ -129,7 +131,7 @@
                 </label>
               </div> <!-- /challenge__group-inner  -->
             </fieldset> <!-- /challenge__group  -->
-            <fieldset class="challenge__group">
+            <fieldset class="challenge__group challenge__group--emotions">
               <div class="challenge__group-inner">
                 <legend class="challenge__title up-title-typo up-title-typo--pink">Опишите свои эмоции</legend>
                <!--  <label class="challenge__title up-title-typo up-title-typo--pink" for="comments">Опишите свои эмоции</label> -->

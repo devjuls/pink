@@ -12,7 +12,7 @@
     left: 0;
     width: 238px;
     height: 276px;
-    background: url('../../images/decor/timer.svg') center center no-repeat;
+    background: url('./../images/decor/timer.svg') center center no-repeat;
   }
 
   &:after {
@@ -40,6 +40,7 @@
 
 .effect__inner {
   margin-left: 50%;
+  padding-top: 35px;
 }
 
 .effect__title {
@@ -67,5 +68,13 @@
 
   .effect {
     display: block;
+  }
+}
+
+@include desktop {
+
+  .effect__inner {
+    margin-left: 35%;
+    padding-top: 70px;
   }
 }

@@ -1,5 +1,8 @@
 .header__inner {
-  min-height: 237px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // min-height: 237px;
   height: 100%;
   width: auto;
   background: url('./../images/decor/bg-back-mobile@1x.jpg') center top no-repeat;
@@ -7,7 +10,7 @@
 }
 
 .header__inner--index {
-  min-height: 462px;
+  // min-height: 462px;
   position: relative;
   z-index: 1;
 }
@@ -42,7 +45,7 @@
   }
 
   .header__inner {
-    min-height: 440px;
+    // min-height: 440px;
   }
 
   .header--index {
@@ -50,7 +53,7 @@
   }
 
   .header__inner--index {
-    min-height: 770px;
+    // min-height: 770px;
   }
 
   .header__photo {

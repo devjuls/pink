@@ -68,6 +68,11 @@
 
 @include tablet {
 
+  .prices__list {
+    // display: flex;
+    // justify-content: space-between;
+  }
+
   .prices__feature-name {
     display: none;
   }
@@ -76,6 +81,8 @@
     display: block;
     width: 155px;
     float: left;
+    // flex-basis: 155px;
+    // flex-grow: 1;
     padding: 0;
 
     position: relative;
@@ -106,6 +113,8 @@
     }
   }
 
+
+
   .prices__top {
     display: block;
     float: left;
@@ -126,12 +135,14 @@
   .prices__feature {
     display: block;
     @include clearfix;
+    // display: flex;
   }
 
   .prices__feature-value {
     display: block;
-    float: left;
     width: 155px;
+    // flex-basis: 155px;
+    // flex-grow: 1;
     padding-top: 25px;
     padding-bottom: 25px;
     border-right: 2px solid #e5e5e5;

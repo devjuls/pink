@@ -5,6 +5,8 @@
 
 .footer__inner {
   @include container;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__logo {
@@ -61,36 +63,13 @@
 @include tablet {
 
   .footer__inner {
-    @include clearfix;
-  }
-
-  .footer__logo {
-    float: left;
-    width: 30%;
-    text-align: left;
-  }
-
-  .socials {
-    float: left;
-    width: 45%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .socials__list {
     padding-top: 0;
     padding-bottom: 0;
   }
-
-  .socials__item {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-  .copyright {
-    float: right;
-    width: 25%;
-    padding-top: 10px;
-    text-align: right;
-  }
 }
-
-

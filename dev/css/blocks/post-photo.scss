@@ -117,18 +117,19 @@
   }
 
   .post-photo__inner {
-    @include clearfix;
+    display: flex;
+    justify-content: space-between;
   }
 
   .post-photo__image {
     width: 48%;
-    float: left;
-    margin-right: 2%;
+    margin: 0;
   }
 
   .post-photo__tools-wrapper {
-    width: 48%;
-    float: right;
+    width: 46%;
+    display: flex;
+    flex-direction: column;
   }
 
   .post-photo__tools {
@@ -171,6 +172,31 @@
   }
 
   .post-photo__buttons {
-    padding-top: 50px;
+    margin-top: auto;
+  }
+}
+
+
+@include desktop {
+
+  .post-photo__inner {
+    justify-content: space-around;
+  }
+
+  .post-photo__image {
+    width: 30%;
+  }
+
+  .post-photo__tools-wrapper {
+    width: 45%;
+  }
+
+  .post-photo__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .post-photo__submit, .post-photo__cancel {
+    width: 45%;
   }
 }

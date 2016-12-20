@@ -5,6 +5,7 @@
 }
 
 .testimonials__item {
+
   &:nth-child(n+2) {
     display: none;
   }
@@ -34,4 +35,40 @@
 
 .testimonials__text {
   text-align: center;
+}
+
+
+//adaptive
+
+@include tablet {
+
+  .testimonials__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 65px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -39px;
+      width: 79px;
+      height: 63px;
+      background: url('./../images/icons/quotes.svg') center center no-repeat;
+    }
+  }
+
+  .testimonials__text {
+    order: 1;
+  }
+
+  .testimonials__author {
+    order: 2;
+  }
+
+  .testimonials__info {
+    order: 3;
+  }
 }

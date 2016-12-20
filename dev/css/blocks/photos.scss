@@ -10,24 +10,33 @@
   }
 }
 
-.photos__item-info {
-  @include container;
-  text-align: left;
-  background-color: $light-grey;
-  padding: 25px 16px;
-}
-
 .photos__list {
   @include container;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  // align-items: stretch;
+  // align-content: stretch;
 }
 
 .photos__item {
   margin-bottom: 20px;
+  flex-basis: $container-width;
+  // flex-grow: 1;
 
   img {
     display: block;
     margin: 0 auto;
   }
+}
+
+.photos__item-info {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: $light-grey;
+  padding: 25px 16px;
 }
 
 .photos__author {
@@ -45,22 +54,28 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $pink;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+
+
+  &:before {
+    content: "";
+    width: 13px;
+    height: 12px;
+    margin-right: 18px;
+    background: url('./../images/icons/icon-heart.svg') center center no-repeat;
+  }
+}
+
+.photos__like-text {
+  margin-right: 5px;
 }
 
 .photos__item--featured {
 
   img {
     width: 100%;
-  }
-
-  .photos__item-info {
-    position: relative;
-  }
-
-  .photos__like {
-    position: absolute;
-    top: 25px;
-    right: 16px;
   }
 }
 
@@ -69,27 +84,10 @@
 
 @include tablet {
 
-  .photos__list {
-    @include clearfix;
-  }
-
-  .photos__item {
-    width: 48%;
-    float: left;
-
-    &:nth-child(odd) {
-      margin-right: 4%;
-    }
-
-    img {
-      width: 100%;
-    }
-  }
-
   .photos__item-info {
     width: 100%;
-    min-height: 187px;
-    position: relative;
+    // min-height: 187px;
+    // position: relative;
   }
 
   .photos__author {
@@ -103,23 +101,47 @@
   }
 
   .photos__like {
-    position: absolute;
-    bottom: 25px;
-    left: 16px;
+    &:before {
+      order: 2;
+      margin-right: 0;
+      margin-left: auto;
+    }
   }
 
   .photos__item--featured {
     width: 100%;
 
     .photos__item-info {
+      @include container;
       min-height: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: baseline;
+    }
+
+    .photos__author {
+      order: 1;
+      margin-right: 5px;
+    }
+
+    .photos__time {
+      order: 2;
+    }
+
+    .photos__post {
+      order: 4;
+      width: 100%;
     }
 
     .photos__like {
-      top: 25px;
-      right: 16px;
-      bottom: auto;
-      left: auto;
+      order: 3;
+      margin-left: auto;
+      text-align: right;
+
+      &:before {
+        margin-left: 15px;
+      }
     }
   }
 }

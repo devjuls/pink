@@ -9,18 +9,16 @@
   margin-bottom: 35px;
 }
 
+.contacts__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .contacts__item {
   margin-bottom: 20px;
-
-  @include tablet {
-    float: left;
-    width: 50%;
-
-    &:last-child {
-      float: none;
-      margin: 0 auto;
-    }
-  }
+  flex-basis: $container-width;
+  flex-grow: 1;
 }
 
 .contacts__title {
@@ -29,4 +27,17 @@
 
 .contacts__info {
   font-size: 24px;
+}
+
+
+//adaptive
+
+@include desktop {
+
+  .contacts__item {
+    &:nth-child(2) {
+      order: 1;
+    }
+  }
+
 }
