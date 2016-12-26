@@ -1,7 +1,6 @@
 .challenge__promo {
   @include container;
   margin-top: 50px;
-  margin-bottom: 50px;
 
   p {
     text-align: center;
@@ -39,9 +38,11 @@
   width: 100%;
   border: 2px solid #e5e5e5;
   border-radius: 2px;
-  padding: 18px 22px;
+  padding: 15px 22px;
   font-size: 18px;
   color: $grey;
+  transition: border-color 0.3s;
+  line-height: 30px;
 
   &::-webkit-input-placeholder {
     color: $grey;
@@ -56,6 +57,14 @@
   &:-moz-placeholder {
     color: $grey;
     opacity: 1;
+  }
+
+  &:hover {
+    border-color: $grey;
+  }
+
+  &:focus {
+    border-color: $pink;
   }
 }
 
@@ -92,6 +101,7 @@
   height: 39px;
   border: 2px solid #e5e5e5;
   border-radius: 2px;
+  background-color: #fff;
   position: relative;
 
   &:before {
@@ -127,6 +137,14 @@
       background-color: $pink;
     }
   }
+
+  &:hover {
+    border-color: $grey;
+  }
+
+  &:active {
+    border-color: $pink;
+  }
 }
 
 .challenge__choice:checked + .challenge__choice-visible--checkbox{
@@ -150,20 +168,6 @@
 
 .challenge__form-bottom {
   @include container;
-}
-
-.challenge__submit {
-  width: 100%;
-  background-color: #2aab6d;
-  border: 2px solid #2aab6d;
-  border-radius: 2px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 40px;
 }
 
 .challenge__instructions {
@@ -191,6 +195,7 @@
   .challenge__promo {
     padding-left: 60px;
     padding-right: 60px;
+    margin-bottom: 50px;
   }
 
   .challenge__group {
@@ -243,8 +248,8 @@
         display: block;
         content: "";
         position: absolute;
-        bottom: 0px;
-        right: 0;
+        top: 2px;
+        right: 2px;
         margin: auto;
         width: 60px;
         height: 60px;
@@ -285,10 +290,10 @@
         margin-top: 16px;
       }
 
-      &:before {
-        bottom: auto;
-        top: 0;
-      }
+      // &:before {
+      //   bottom: auto;
+      //   top: 0;
+      // }
     }
 
     .challenge__input {
@@ -322,7 +327,7 @@
     margin-bottom: 80px;
   }
 
-  .challenge__submit {
+  .btn-submit {
     width: 50%;
     margin-bottom: 0;
   }
@@ -362,7 +367,7 @@
     }
   }
 
-  .challenge__submit {
+  .btn-submit {
     width: 35%;
   }
 

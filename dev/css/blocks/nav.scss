@@ -2,14 +2,40 @@
   @include container;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding-top: 22px;
   padding-bottom: 22px;
 }
 
 .nav__logo {
+  display: block;
+  line-height: 1;
+
   img {
     display: block;
+    width: 74px;
+    height: auto;
+  }
+
+  &--tablet, &--desktop {
+    display: none;
+  }
+
+  svg path {
+    transition: fill 0.3s;
+  }
+
+  &:hover {
+    svg path {
+      fill: $pink;
+    }
+  }
+
+  &:active {
+    svg path {
+      fill: #fff;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -21,20 +47,82 @@
 }
 
 .nav__toggle {
-  width: 20%;
   width: 50px;
   height: 24px;
   outline: none;
   border: none;
   cursor: pointer;
-  background: url('./../images/icons/icon-menu-burger.svg') center center no-repeat;
+  position: relative;
+  background-color: transparent;
+
+  &:before { //гамбургер
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    box-shadow: 0 10px 0 0 #fff,
+                0 20px 0 0 #fff;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    &:before {
+      background-color: $pink;
+      box-shadow: 0 10px 0 0 $pink,
+                  0 20px 0 0 $pink;
+    }
+  }
+
+  &:active {
+    &:before {
+      background-color: rgba($pink, 0.3);
+      box-shadow: 0 10px 0 0 rgba($pink, 0.3),
+                  0 20px 0 0 rgba($pink, 0.3);
+    }
+  }
+
 }
 
 .nav.open {
   background-color: $dark-grey;
 
   .nav__toggle {
-    background: url('./../images/icons/icon-menu-cross.svg') center center no-repeat;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left:13px;
+      width: 33px;
+      height: 4px;
+      background-color: #fff;
+      margin: 0 auto;
+      transition: all 0.2s;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      &:before, &:after {
+        background-color: $pink;
+      }
+    }
+
+    &:active {
+      &:before, &:after {
+        background-color: rgba($pink, 0.3);
+      }
+    }
   }
 
   .nav__list {
@@ -54,7 +142,21 @@
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
+    transition: color 0.3s;
   }
+
+  a[href] {
+    &:hover {
+      color: $pink;
+    }
+
+    &:active {
+      color: #fff;
+      opacity: 0.3;
+    }
+  }
+
+
 }
 
 .nav--nojs { //если отключен js - меню открыто, гамбургер скрыт
@@ -72,16 +174,53 @@
 
 //adaptive
 
+@include tablet {
+
+  .nav__wrapper {
+    padding-bottom: 35px;
+  }
+
+
+  .nav__logo {
+    img {
+      width: 146px;
+      height: auto;
+    }
+
+    &--mobile, &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+}
+
+
 @include desktop {
 
   .nav {
     @include container;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
   }
 
   .nav__wrapper {
     flex-basis: 150px;
+    padding-top: 0;
+    padding-bottom: 44px;
+  }
+
+  .nav__logo {
+    &--mobile, &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
   }
 
   .nav__list {
@@ -102,6 +241,26 @@
     a {
       background-color: transparent;
       box-shadow: none;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      text-transform: none;
+      font-weight: 400;
+    }
+
+    &--active {
+      a {
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+          left: 0;
+          bottom: 35px;
+        }
+      }
     }
   }
 }

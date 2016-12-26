@@ -28,33 +28,42 @@
 }
 
 .post-photo__tool {
+  text-align: center;
 
   a {
     display: inline-block;
     vertical-align: middle;
-    width: 48px;
-    height: 48px;
 
-  }
-
-  &--crop {
-    a{
-      background: url('./../images/icons/icon-editor-crop.svg') center center no-repeat;
-      background-size: contain;
+    &:hover {
+      svg {
+        opacity: 0.5;
+      }
     }
   }
 
-  &--fill {
-    a {
-      background: url('./../images/icons/icon-editor-fill.svg') center center no-repeat;
-      background-size: contain;
-    }
+  svg {
+    opacity: 0.3;
   }
 
-  &--contrast {
+  &--active {
+    .post-photo__range-toggle {
+      background-color: $pink;
+    }
+
+    svg {
+      opacity: 1;
+    }
+
+    svg path.svg-filled {
+      fill: $pink;
+    }
+
     a {
-      background: url('./../images/icons/icon-editor-contrast.svg') center center no-repeat;
-      background-size: contain;
+      &:hover {
+        svg {
+          opacity: 1;
+        }
+      }
     }
   }
 }
@@ -96,6 +105,10 @@
   border: 2px solid $pink;
   border-radius: 50%;
   background-color: $light-grey;
+
+  &:active {
+    background-color: $pink;
+  }
 }
 
 .post-photo__buttons {
@@ -119,10 +132,13 @@
   .post-photo__inner {
     display: flex;
     justify-content: space-between;
+
+    picture {
+      width: 48%;
+    }
   }
 
   .post-photo__image {
-    width: 48%;
     margin: 0;
   }
 
@@ -150,11 +166,26 @@
     vertical-align: middle;
     width: 20%;
     margin: 0;
-    text-align: left;
 
-    a {
-      width: 22px;
-      height: 22px;
+    &--crop {
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &--fill {
+      svg {
+        width: 24px;
+        height: 22px;
+      }
+    }
+
+    &--contrast {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 
@@ -164,7 +195,7 @@
     width: 78%;
     position: relative;
     left: 0;
-    margin-top: 35px;
+    margin-top: 26px;
 
     &:after {
       display: none;
@@ -181,14 +212,42 @@
 
   .post-photo__inner {
     justify-content: space-around;
-  }
 
-  .post-photo__image {
-    width: 30%;
+    picture {
+      width: 30%;
+    }
   }
 
   .post-photo__tools-wrapper {
     width: 45%;
+  }
+
+  .post-photo__tool-wrapper {
+    margin-bottom: 10px;
+  }
+
+  .post-photo__tool {
+
+    &--crop {
+      svg {
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    &--fill {
+      svg {
+        width: 48px;
+        height: 43px;
+      }
+    }
+
+    &--contrast {
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
   }
 
   .post-photo__buttons {

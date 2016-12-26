@@ -1,9 +1,35 @@
 .copyright {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .copywrite__text, .copywrite__link {
-  display: inline-block;
-  vertical-align: middle;
   line-height: 1;
 }
+
+.copywrite__text {
+  margin-right: 5px;
+}
+
+.copywrite__link {
+  svg path {
+    transition: fill 0.3s;
+  }
+
+  &:hover {
+    svg path {
+      fill: $grey;
+    }
+  }
+
+  &:active {
+    svg path {
+      fill: $grey;
+      opacity: 0.3;
+    }
+  }
+}
+
+

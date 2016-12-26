@@ -2,15 +2,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // min-height: 237px;
   height: 100%;
   width: auto;
   background: url('./../images/decor/bg-back-mobile@1x.jpg') center top no-repeat;
   background-size: cover;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url('./../images/decor/bg-back-mobile@2x.jpg') center top no-repeat;
+    background-size: 700px; //ширина bg-back-mobile@1x.jpg
+  }
 }
 
 .header__inner--index {
-  // min-height: 462px;
   position: relative;
   z-index: 1;
 }
@@ -20,7 +23,7 @@
 }
 
 .header__photo {
-  margin-top: 150px;
+  margin-top: 80px;
 
     img {
       display: block;
@@ -40,34 +43,52 @@
 
 @include tablet {
 
-  .header {
-    min-height: 440px;
-  }
+  // .header {
+  //   min-height: 440px;
+  // }
 
   .header__inner {
-    // min-height: 440px;
+    background: url('./../images/decor/bg-back-tablet@1x.jpg') center top no-repeat;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url('./../images/decor/bg-back-tablet@2x.jpg') center top no-repeat;
+      background-size: 1200px; //ширина bg-back-tablet@1x.jpg
+    }
   }
 
   .header--index {
-    min-height: 770px;
-  }
-
-  .header__inner--index {
-    // min-height: 770px;
+    min-height: 660px;
   }
 
   .header__photo {
+    @include container;
+    margin-top: 80px;
+
     img {
-      height: 545px;
-      width: auto;
       margin: 0 auto;
-      margin-right: 5%;
     }
   }
 
   .header__title {
     padding-top: 80px;
     padding-bottom: 135px;
+  }
+}
+
+
+@include desktop {
+
+  .header--index {
+    min-height: 769px;
+  }
+
+  .header__inner {
+    background: url('./../images/decor/bg-back-desktop@1x.jpg') center top no-repeat;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url('./../images/decor/bg-back-desktop@2x.jpg') center top no-repeat;
+      background-size: 2560px; //ширина bg-back-desktop@1x.jpg
+    }
   }
 }
 

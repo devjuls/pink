@@ -1,7 +1,6 @@
 .contacts {
   @include container;
   padding-top: 45px;
-  padding-bottom: 40px;
   text-align: center;
 }
 
@@ -19,6 +18,21 @@
   margin-bottom: 20px;
   flex-basis: $container-width;
   flex-grow: 1;
+
+  a {
+    transition: color 0.3s;
+
+    &:hover {
+      color: $grey;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $grey;
+      opacity: 0.3;
+      text-decoration: none;
+    }
+  }
 }
 
 .contacts__title {
@@ -32,7 +46,26 @@
 
 //adaptive
 
+@include tablet {
+
+  .contacts {
+    padding-top: 55px;
+  }
+
+  .contacts__item {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 @include desktop {
+
+  .contacts {
+    padding-top: 75px;
+  }
 
   .contacts__item {
     &:nth-child(2) {

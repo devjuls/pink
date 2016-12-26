@@ -1,5 +1,20 @@
 .prices {
   background-color: $light-grey;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    min-height: 70px;
+    top: 0;
+    left: 0;
+    background: url('./../images/decor/bg-triangle-white.svg') center center no-repeat;;
+    background-size: cover;
+    z-index: 1;
+  }
 }
 
 .prices__list {
@@ -68,9 +83,10 @@
 
 @include tablet {
 
-  .prices__list {
-    // display: flex;
-    // justify-content: space-between;
+  .prices {
+    &:before {
+      min-height: 100px;
+    }
   }
 
   .prices__feature-name {
@@ -81,8 +97,6 @@
     display: block;
     width: 155px;
     float: left;
-    // flex-basis: 155px;
-    // flex-grow: 1;
     padding: 0;
 
     position: relative;
@@ -113,8 +127,6 @@
     }
   }
 
-
-
   .prices__top {
     display: block;
     float: left;
@@ -135,17 +147,46 @@
   .prices__feature {
     display: block;
     @include clearfix;
-    // display: flex;
   }
 
   .prices__feature-value {
     display: block;
     width: 155px;
-    // flex-basis: 155px;
-    // flex-grow: 1;
     padding-top: 25px;
     padding-bottom: 25px;
     border-right: 2px solid #e5e5e5;
+  }
+}
+
+
+@include desktop {
+
+  .prices {
+    padding-top: 120px;
+    &:before {
+      min-height: 150px;
+    }
+  }
+
+  .prices__table {
+    width: 235px;
+
+    &:nth-child(1) {
+      margin-left: 235px;
+
+      .prices__feature-name {
+        width: 235px;
+        left: -235px;
+      }
+    }
+  }
+
+  .prices__top {
+    width: 235px;
+  }
+
+  .prices__feature-value {
+    width: 235px;
   }
 }
 

@@ -5,8 +5,24 @@
 
 .features__wrapper {
   background-color: $light-grey;
-  padding-top: 50px;
-  margin-bottom: 60px;
+  padding-top: 70px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    min-height: 70px;
+    top: 0;
+    left: 0;
+    background: url('./../images/decor/bg-triangle-white.svg') center center no-repeat;;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  // svg {
+  //   width: 100%;
+  // }
 }
 
 .features__list {
@@ -15,7 +31,6 @@
 }
 
 .features__item {
-  margin-bottom: 30px;
 
   img {
     margin: 0 auto;
@@ -35,12 +50,21 @@
 
 .features__text {
   text-align: center;
+  padding-bottom: 30px;
 }
 
 
 //adaptive
 
 @include tablet {
+
+  .features__wrapper {
+    margin-bottom: 60px;
+
+    &:before {
+      min-height: 100px;
+    }
+  }
 
   .features__content {
     margin-left: 50%;
@@ -52,11 +76,33 @@
       position: absolute;
       left: 0;
       bottom: 0;
+      z-index: 2;
+    }
+  }
+
+  .features__title {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .features__text {
+    text-align: left;
+
+    p {
+      font-size: 14px;
     }
   }
 }
 
 @include desktop {
+
+  .features__wrapper {
+    padding-top: 20px;
+
+    &:before {
+      min-height: 150px;
+    }
+  }
 
   .features__content {
     margin-left: 0;
@@ -71,21 +117,32 @@
      // justify-content: space-between;
     margin-left: 25px;
     margin-right: 25px;
+    flex-basis: 33%;
 
     img {
       display: block;
-      position: static;
+      position: relative;
       order: 1;
       margin-bottom: 55px;
     }
   }
 
   .features__title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 10px;
     order: 2;
   }
 
   .features__text {
+    text-align: center;
     order: 3;
     // margin-top: auto;
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
   }
 }

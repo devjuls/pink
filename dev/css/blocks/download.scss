@@ -41,8 +41,8 @@
   .download {
     position: relative;
     z-index: 2;
-    margin-top: -550px;
-    margin-bottom: 55px;
+    margin-top: -530px;
+    margin-bottom: 0;
     margin-left: 0;
     background-color: transparent;
   }
@@ -53,5 +53,16 @@
 
   .download__promo {
     display: block;
+  }
+}
+
+@include desktop {
+
+  .download {
+    margin-top: -600px;
+  }
+
+  .download__content {
+    width: 35%;
   }
 }

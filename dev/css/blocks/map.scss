@@ -1,0 +1,65 @@
+.map {
+  width: 100%;
+  min-height: 421px;
+  position: relative;
+  background: url('./../images/content/bg-map-mobile@1x.png') center center no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url('./../images/content/bg-map-mobile@2x.png') center center no-repeat;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    min-height: 100px;
+    top: 0;
+    left: 0;
+    background: url('./../images/decor/bg-triangle-white-footer.svg') center center no-repeat;;
+    background-size: cover;
+    z-index: 1;
+  }
+}
+
+
+//adaptive
+
+@include tablet {
+
+  .map {
+    min-height: 480px;
+    background: url('./../images/content/bg-map-tablet@1x.jpg') center center no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url('./../images/content/bg-map-tablet@2x.jpg') center center no-repeat;
+    }
+
+    &:before {
+      min-height: 150px;
+    }
+  }
+
+  // svg {
+  //   width: 100%;
+  // }
+}
+
+
+@include desktop {
+
+  .map {
+    min-height: 600px;
+    background: url('./../images/content/bg-map-desktop@1x.jpg') center center no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url('./../images/content/bg-map-desktop@2x.jpg') center center no-repeat;
+    }
+
+    &:before {
+      min-height: 200px;
+    }
+  }
+}
