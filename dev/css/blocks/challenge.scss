@@ -1,6 +1,6 @@
 .challenge__promo {
   @include container;
-  margin-top: 50px;
+  padding-top: 50px;
 
   p {
     text-align: center;
@@ -17,6 +17,7 @@
 
   &--bg {
     background-color: $light-grey;
+    margin-bottom: 0;
   }
 }
 
@@ -43,6 +44,7 @@
   color: $grey;
   transition: border-color 0.3s;
   line-height: 30px;
+  height: 60px;
 
   &::-webkit-input-placeholder {
     color: $grey;
@@ -66,6 +68,10 @@
   &:focus {
     border-color: $pink;
   }
+}
+
+textarea.challenge__input {
+  height: auto;
 }
 
 .challenge__label {
@@ -252,7 +258,7 @@
         right: 2px;
         margin: auto;
         width: 60px;
-        height: 60px;
+        height: 56px;
         border-bottom-right-radius: 2px;
         border-top-right-radius: 2px;
         z-index: 10;

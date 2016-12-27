@@ -65,9 +65,11 @@
 
   @include tablet {
     width: 620px;
+    margin: 0 auto;
   }
 
   @include desktop {
     width: 940px;
+    margin: 0 auto;
   }
 }

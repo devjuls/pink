@@ -201,7 +201,8 @@
 @include desktop {
 
   .nav {
-    @include container;
+    width: 940px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;

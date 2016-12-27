@@ -12,7 +12,8 @@
     left: 0;
     width: 238px;
     height: 276px;
-    background: url('./../images/decor/timer.svg') center center no-repeat;
+    background: url('./../images/icons/icon-timer.svg') center center no-repeat;
+    background-size: contain;
   }
 
   &:after {

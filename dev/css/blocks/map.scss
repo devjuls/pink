@@ -1,4 +1,4 @@
-.map {
+#map {
   width: 100%;
   min-height: 421px;
   position: relative;
@@ -14,7 +14,7 @@
     position: absolute;
     width: 100%;
     min-height: 100px;
-    top: 0;
+    top: -1px;
     left: 0;
     background: url('./../images/decor/bg-triangle-white-footer.svg') center center no-repeat;;
     background-size: cover;
@@ -27,7 +27,7 @@
 
 @include tablet {
 
-  .map {
+  #map {
     min-height: 480px;
     background: url('./../images/content/bg-map-tablet@1x.jpg') center center no-repeat;
     background-size: cover;
@@ -40,16 +40,12 @@
       min-height: 150px;
     }
   }
-
-  // svg {
-  //   width: 100%;
-  // }
 }
 
 
 @include desktop {
 
-  .map {
+  #map {
     min-height: 600px;
     background: url('./../images/content/bg-map-desktop@1x.jpg') center center no-repeat;
     background-size: cover;
