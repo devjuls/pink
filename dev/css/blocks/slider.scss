@@ -1,0 +1,53 @@
+@keyframes open-slide {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.slider__item {
+  display: none;
+}
+
+.slider__item--active {
+  display: block;
+  animation: open-slide 0.5s;
+}
+
+.slider__controls {
+  text-align: center;
+}
+
+.slider__control {
+  display: inline-block;
+  vertical-align: middle;
+
+  margin-left: 10px;
+  margin-right: 10px;
+
+  a {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $grey;
+    border: 3px solid transparent;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  &--active {
+    a {
+      width: 12px;
+      height: 12px;
+      background-color: white;
+      border: 3px solid $grey;
+      opacity: 1;
+    }
+  }
+}

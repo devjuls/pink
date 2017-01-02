@@ -14,7 +14,7 @@ ymaps.ready(init);
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: '../images/icons/icon-map-marker.svg',
+          iconImageHref: './images/icons/icon-map-marker.svg',
           iconImageSize: [36, 36],
           iconImageOffset: [0, 0]
         });

@@ -2,13 +2,24 @@
   @include container;
   padding-top: 50px;
   padding-bottom: 30px;
+  position: relative;
+
+  &:before {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -39px;
+    width: 79px;
+    height: 64px;
+    background: url('./../images/icons/icon-quotes.svg') center center no-repeat;
+  }
 }
 
 .testimonials__item {
-
-  &:nth-child(n+2) {
-    display: none;
-  }
+  min-height: 320px;
+  margin-bottom: 20px;
 }
 
 .testimonials__author {
@@ -16,25 +27,53 @@
   font-weight: 700;
   color: #000;
   text-align: center;
-
-  @include tablet {
-    font-size: 20px;
-  }
 }
 
 .testimonials__info {
   display: none;
-
-
-  @include tablet {
-    display: block;
-    font-size: 14px;
-    text-align: center;
-  }
 }
 
 .testimonials__text {
   text-align: center;
+}
+
+.testimonials__prev, .testimonials__next {
+  display: none;
+  width: 22px;
+  height: 42px;
+  border: none;
+  outline: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+
+
+  svg path {
+    opacity: 0.3;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    svg path {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    svg path {
+      opacity: 0.1;
+    }
+  }
+}
+
+.testimonials__prev {
+  left: 0px;
+}
+
+.testimonials__next {
+  right: 0px;
 }
 
 
@@ -42,22 +81,9 @@
 
 @include tablet {
 
-  .testimonials__item {
+  .testimonials__item.slider__item--active {
     display: flex;
     flex-direction: column;
-    position: relative;
-    padding-top: 65px;
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      margin-left: -39px;
-      width: 79px;
-      height: 64px;
-      background: url('./../images/icons/icon-quotes.svg') center center no-repeat;
-    }
   }
 
   .testimonials__text {
@@ -66,9 +92,54 @@
 
   .testimonials__author {
     order: 2;
+    font-size: 20px;
+    margin-top: auto;
   }
 
   .testimonials__info {
     order: 3;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@include desktop {
+
+  .testimonials {
+    padding-top: 80px;
+
+    &:before {
+      display: block;
+    }
+  }
+
+  .testimonials__list {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .testimonials__prev, .testimonials__next {
+    display: block;
+  }
+
+  .testimonials__text {
+    order: 1;
+  }
+
+  .testimonials__author {
+    order: 2;
+    font-size: 20px;
+  }
+
+  .testimonials__info {
+    order: 3;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .testimonials__controls {
+    display: none;
   }
 }

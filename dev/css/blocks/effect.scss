@@ -1,5 +1,10 @@
 .effect {
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: none;
+}
+
+.effect__wrapper {
   @include container;
   position: relative;
   min-height: 276px;
@@ -73,6 +78,11 @@
 }
 
 @include desktop {
+
+  .effect {
+    background-color: $light-grey;
+    margin-bottom: 20px;
+  }
 
   .effect__inner {
     margin-left: 35%;
